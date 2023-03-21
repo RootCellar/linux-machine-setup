@@ -19,5 +19,5 @@ If you want Zram:
 
 If you want a ramdisk:
 
-5. Modify the ramdisk mount line in `ramdiskfstab` and copy the line into the file `/etc/fstab`
+5. Modify the size in the ramdisk mount line in `ramdiskfstab` and copy the line into the file `/etc/fstab`
 6. Run `mount -a`
