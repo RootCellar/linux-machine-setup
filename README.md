@@ -9,13 +9,14 @@ So far, this repository only expects Ubuntu or Debian running on your server. So
 ## Ubuntu (Main/Default assumption)
 
 1. Run `./ubuntuinstalls.sh`
+
+If you want Zram:
+
 2. Reboot **IF** you had to install a package containing the zram kernel module
 3. Copy `zram.service` to `/etc/systemd/system/`
 4. Modify `zram.sh` to specify how much memory Zram can use, and place it in `/root/`
 5. Run `systemctl enable zram.service && systemctl start zram.service`
-5. Modify the ramdisk mount line in `ramdiskfstab` and copy to `/etc/fstab`
-6. Run `mount -a`
-7. Done!
+
 If you want a ramdisk:
 
 5. Modify the ramdisk mount line in `ramdiskfstab` and copy the line into the file `/etc/fstab`
