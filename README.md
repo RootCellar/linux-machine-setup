@@ -12,6 +12,7 @@ So far, this repository only expects Ubuntu or Debian running on your server. So
 2. Reboot
 3. Copy `zram.service` to `/etc/systemd/system/`
 4. Modify `zram.sh` to specify how much memory Zram can use, and place it in `/root/`
+5. Run `systemctl enable zram.service && systemctl start zram.service`
 5. Modify the ramdisk mount line in `ramdiskfstab` and copy to `/etc/fstab`
 6. Run `mount -a`
 7. Done!
