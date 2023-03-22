@@ -10,6 +10,8 @@ So far, this repository only expects Ubuntu or Debian running on your server. So
 
 1. Run `./ubuntuinstalls.sh`
 
+### Zram
+
 Zram is a form of swap where, instead of moving pages of memory to the hard disk, they are instead compressed and kept in RAM.
 This basically allows the same amount of RAM to hold more data than it could originally, however accessing it is slower
 because the pages have to be decompressed and swapped back into main RAM to be read/written to.
@@ -23,6 +25,8 @@ If you want Zram:
 3. Copy `zram.service` to `/etc/systemd/system/`
 4. Modify `zram.sh` to specify how much memory Zram can use, and place it in `/root/`
 5. Run `systemctl enable zram.service && systemctl start zram.service`
+
+### Ramdisk
 
 Ramdisks are handy for placing temporary files that you would prefer, for some reason, to not touch the disk.
 They are also useful for moving files from the disk onto them so that they can be accessed very quickly. 
