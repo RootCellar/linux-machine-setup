@@ -17,6 +17,11 @@ If you want Zram:
 4. Modify `zram.sh` to specify how much memory Zram can use, and place it in `/root/`
 5. Run `systemctl enable zram.service && systemctl start zram.service`
 
+Ramdisks are handy for placing temporary files that you would prefer, for some reason, to not touch the disk.
+They are also useful for moving files from the disk onto them so that they can be accessed very quickly. 
+For example: You could move the files for a Minecraft server into the ramdisk so that the world can be loaded and saved very quickly.
+The risk you take is that anything put in the ramdisk goes away when the system shuts down.
+
 If you want a ramdisk:
 
 5. Modify the size in the ramdisk mount line in `ramdiskfstab` and copy the line into the file `/etc/fstab`
