@@ -6,7 +6,7 @@
 
 cpu_count=$(nproc --all)
 
-#For loop all logical CPUs and set clock rate to supplied argument
+#For loop all logical CPUs and set maximum clock rate to supplied argument
 for i in $(eval echo {0..$cpu_count}); do
 	echo $i
 	cpufreq-set --cpu $1 -u $1
