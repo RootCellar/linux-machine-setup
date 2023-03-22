@@ -4,6 +4,7 @@
 
 modprobe zram
 
+# Change the "8G" here to however large you want your zram swap file to be:
 echo 8G > /sys/block/zram0/disksize
 mkswap --label zram0 /dev/zram0
 swapon -p 100 /dev/zram0
