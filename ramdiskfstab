@@ -1,1 +1,3 @@
+
+# Ramdisk
 none /mnt/ramdisk tmpfs nodev,nosuid,nodiratime,size=8G 0 0
