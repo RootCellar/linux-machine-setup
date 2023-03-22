@@ -10,6 +10,13 @@ So far, this repository only expects Ubuntu or Debian running on your server. So
 
 1. Run `./ubuntuinstalls.sh`
 
+Zram is a form of swap where, instead of moving pages of memory to the hard disk, they are instead compressed and kept in RAM.
+This basically allows the same amount of RAM to hold more data than it could originally, however accessing it is slower
+because the pages have to be decompressed and swapped back into main RAM to be read/written to.
+If you have a fast CPU but a slow hard drive, Zram may be a good thing. However, it may make performance worse
+if swapping to your disk is actually faster than compressing the memory and keeping it.
+In any case though, Zram will improve the life span of your hard disk.
+
 If you want Zram:
 
 2. Reboot **IF** you had to install a package containing the zram kernel module
