@@ -1,5 +1,5 @@
 [Unit]
-Description=ZRAM Enabling
+Description=Automatically run /root/zram.sh on boot
 
 [Service]
 ExecStart=/bin/bash /root/zram.sh
