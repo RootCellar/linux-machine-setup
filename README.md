@@ -6,7 +6,7 @@ If you know of anything that is either good for most servers **OR** is good in s
 
 So far, this repository only expects Ubuntu or Debian running on your server. Some things will work on others, some will not.
 
-## Ubuntu (Main/Default assumption)
+## Ubuntu (or Debian-based)
 
 1. Run `./ubuntuinstalls.sh`
 
@@ -37,3 +37,8 @@ If you want a ramdisk:
 
 5. Modify the size in the ramdisk mount line in `ramdiskfstab` and copy the line into the file `/etc/fstab`
 6. Run `mount -a`
+
+## Other distros
+
+Most things will just work on other distros, however the `ubuntuinstalls.sh` script definitely won't.
+Scripts for other common distros *may* be added at some point.
