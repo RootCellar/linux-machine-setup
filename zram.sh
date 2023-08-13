@@ -4,6 +4,7 @@
 
 modprobe zram
 
+echo zstd > /sys/block/zram0/comp_algorithm
 # Change the "8G" here to however large you want your zram swap file to be:
 echo 8G > /sys/block/zram0/disksize
 mkswap --label zram0 /dev/zram0
