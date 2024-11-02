@@ -1,0 +1,3 @@
+
+# /tmp in tmpfs (Ramdisk)
+none /tmp tmpfs nodev,nosuid,noatime,nodiratime,size=4G 0 0
