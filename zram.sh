@@ -31,15 +31,16 @@ ALGORITHM=zstd
 # that are used for different purposes. Change this only if you know what you're doing.
 DEVICE=zram0
 
-echo Resetting Zram device...
+# Ensure zram module is loaded
+modprobe zram
 
 # Reset Zram Device
-swapoff /dev/$DEVICE || exit 1
+echo Resetting Zram device...
+swapoff /dev/$DEVICE
 echo 1 > /sys/block/$DEVICE/reset || exit 1
 
 # Setup Zram block device
 echo Initializing Zram device $DEVICE - $SIZE $ALGORITHM ...
-modprobe zram || exit 1
 echo $ALGORITHM > /sys/block/$DEVICE/comp_algorithm || exit 1
 echo $SIZE > /sys/block/$DEVICE/disksize || exit 1
 
